@@ -33,6 +33,12 @@ public class Pedido {
     @Column(name = "fecha_pedido")
     private Instant fechaPedido;
 
+    @Size(max = 200)
+    @NotNull
+    @ColumnDefault("''")
+    @Column(name = "direccion_envio", nullable = false, length = 200)
+    private String direccionEnvio;
+
     public Integer getId() {
         return id;
     }
@@ -71,6 +77,14 @@ public class Pedido {
 
     public void setFechaPedido(Instant fechaPedido) {
         this.fechaPedido = fechaPedido;
+    }
+
+    public String getDireccionEnvio() {
+        return direccionEnvio;
+    }
+
+    public void setDireccionEnvio(String direccionEnvio) {
+        this.direccionEnvio = direccionEnvio;
     }
 
 }

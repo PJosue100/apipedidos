@@ -27,7 +27,7 @@ public class PedidoService {
     }
 
     public List<Pedido> obtenerPorIdUsuario(Long idUsuario) {
-        return pedidoRepository.findByIdUsuario(idUsuario);
+        return pedidoRepository.findByIdUsuarioOrderByIdDesc(idUsuario);
     }
 
 

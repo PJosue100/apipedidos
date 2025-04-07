@@ -13,5 +13,7 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     List<Pedido> findByIdUsuario(Long idUsuario);
 
+    List<Pedido> findByIdUsuarioOrderByIdDesc(Long idUsuario);
+
 }
 
